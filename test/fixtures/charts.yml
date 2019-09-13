@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  chart_name: MyString
+  user: one
+
+two:
+  chart_name: MyString
+  user: two

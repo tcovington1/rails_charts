@@ -1,0 +1,9 @@
+<h1>Add Chart</h1>
+<%= form_for @chart do |f| %>
+  <div class="field">
+    <%= f.label :chart_name %>
+    <%= f.text_field :chart_name, required: true, placeholder: "Name" %>
+  </div>
+
+  <%= f.submit %>
+<% end %>

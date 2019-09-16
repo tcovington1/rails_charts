@@ -1,0 +1,22 @@
+<h1>Showing <%= @chart.tunes.name%></h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Artist</th>
+    <th>Genre</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr>
+    <td><%=  @tune.name %></td>
+    <td><%=  @tune.artist %></td>
+    <td><%=  @tune.genre %></td>
+    <td><%= link_to "Edit", edit_chart_tune_path(@chart, @tune)%></td>
+    <td><%= link_to "Delete", chart_tune_path(@chart, @tune), method: :delete %></td>
+  <br>
+  </tr>
+
+</tbody>

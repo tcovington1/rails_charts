@@ -1,0 +1,17 @@
+<h1><%= @chart.chart_name %></h1>
+
+<%= link_to 'Add Song', new_chart_tune_path(@chart) %>
+<br>
+
+<% if @chart.tunes.length <= 0 ? 'No songs' : ''%>
+<%end%>
+
+<br>
+
+<h2>Songs</h2>
+<% @chart.tunes.each do |tune|%>
+  <%=  tune.name %>
+  <%= link_to 'Song Page', chart_tune_path(@chart, tune)%>
+  <br>
+
+<%  end %>

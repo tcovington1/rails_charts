@@ -8,6 +8,8 @@
   <% @charts.each do |chart| %>
     <div class = "box" >
       <span><%= chart.chart_name %></span>
+      <span><%= link_to "View Chart", chart_tunes_path(chart) %></span>
+      <span><%= link_to "Edit Chart", edit_chart_path(chart) %></span>
     </div>
   <% end %>
   </div>

@@ -1,0 +1,19 @@
+<h1>Add a Song</h1>
+
+<div class = 'row'>
+<%= form_for [@chart, @tune] do |f|%>
+<div class= 'input-field col s6'>
+<%= f.label :name %>
+<%= f.text_field :name %>
+</div>
+<div class= 'input-field col s6'>
+<%= f.label :artist %>
+<%= f.text_field :artist %>
+</div>
+<div class= 'input-field col s6'>
+<%= f.label :genre %>
+<%= f.text_field :genre %>
+</div>
+<%= f.submit%>
+<% end %>
+</div>

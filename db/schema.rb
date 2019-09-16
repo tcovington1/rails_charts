@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_12_205158) do
+ActiveRecord::Schema.define(version: 2019_09_13_203347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 2019_09_12_205158) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_charts_on_user_id"
+  end
+
+  create_table "tunes", force: :cascade do |t|
+    t.string "name"
+    t.string "artist"
+    t.string "genre"
+    t.bigint "chart_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chart_id"], name: "index_tunes_on_chart_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,4 +48,5 @@ ActiveRecord::Schema.define(version: 2019_09_12_205158) do
   end
 
   add_foreign_key "charts", "users"
+  add_foreign_key "tunes", "charts"
 end

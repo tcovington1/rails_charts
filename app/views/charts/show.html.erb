@@ -1,2 +1,13 @@
-<h1>Charts#show</h1>
+<h1><%= @chart.chart_name %></h1>
 <p>Find me in app/views/charts/show.html.erb</p>
+
+
+<%= link_to 'Add Song', chart_tunes_path(@chart) %>
+
+
+
+<% @chart.tunes.each do |tune|%>
+  <%=  tune.name %>
+
+<%  end %>
+
